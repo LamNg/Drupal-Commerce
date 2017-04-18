@@ -10,5 +10,6 @@
     "issues": "https://www.drupal.org/project/issues/shopify_product",
     "source": "http://cgit.drupalcode.org/shopify_product"
   },
+  "_comment": "@TODO: this looks strange in a composer.json. Why not list the dependencies or remove this entirely.",
   "require": { }
 }

@@ -20,7 +20,10 @@
 
 {{ attach_library('commerce_order/form') }}
 {% set order_state = order_entity.getState.getLabel %}
-
+{# @TODO: Now that 8.3.x is released, can we use create_attribute? #}
+{# @See https://www.drupal.org/node/2616756 #}
+{# In general, I would like to see less hard-coded classes and more twig blocks and attribute objects. #}
+{# You're themer will love you #}
 <div class="layout-order-form clearfix">
   <div class="layout-region layout-region-order-main">
     {{ order.order_items }}

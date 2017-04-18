@@ -58,6 +58,7 @@ process:
   state: Financial Status
   total_price: Total
 destination:
+  # Interesting to see where my code pop up. I wrote these comments without much thought ;)
   # Here we're saying that each row of data (line from the CSV file) will be
   # used to create a node entity.
   plugin: entity:commerce_order

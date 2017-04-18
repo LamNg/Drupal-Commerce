@@ -72,7 +72,8 @@ class Product extends CSV {
     foreach ($values as $value) {
       $targets[] = ['target_id' => $value];
     }
-
+    // Setting a destination property in the source plugin is really strange.
+    // Set a source property, then map it in the yml.
     $row->setDestinationProperty('variations', $targets);
     $row->rehash();
     return TRUE;

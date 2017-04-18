@@ -20,6 +20,7 @@
  */
 #}
 <article{{ attributes }}>
+{# Your themer is going to hate you for these inline styles. #}
   <div style="width: 60%; float: left;">
     {{- product|without('variation_attributes', 'variations', 'variation_title', 'variation_sku', 'variation_price') -}}
   </div>

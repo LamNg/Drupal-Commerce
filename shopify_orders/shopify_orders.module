@@ -47,6 +47,7 @@ function shopify_orders_rebuild() {
  * Implements hook_config_schema_info_alter().
  */
 function shopify_orders_config_schema_info_alter(&$definitions) {
+  // @TODO: This deserves better comments. Why is it necessary?
   if (isset($definitions['migrate_plus.source.*'])) {
     $definitions['migrate_plus.source.*']['mapping'] = [
       'keys' => [

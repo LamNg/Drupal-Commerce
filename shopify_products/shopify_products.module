@@ -29,6 +29,8 @@ function shopify_products_rebuild() {
     $revert = [];
     foreach ($config_names as $name) {
         // For some reason this causes errors, skip this config.
+        // @TODO: It would be good to file a bug report, either against migrate_plus or core explaining the issue.
+        // I think the issue might have been resolved recently and was a missing schema defination for the migration_group config entity.
         if (strpos($name, 'migrate_plus.migration_group') !== FALSE) {
             continue;
         }

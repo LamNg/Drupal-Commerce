@@ -22,6 +22,8 @@ process:
   price/currency_code:
     plugin: default_value
     default_value: USD
+  # Rather than building all these dependent migrations, you might try using migrate_plus's entity_lookup/entity_generate process plugin.
+  # It would save a lot of extra work.
   attribute_option1value/target_id:
     -
       plugin: migration

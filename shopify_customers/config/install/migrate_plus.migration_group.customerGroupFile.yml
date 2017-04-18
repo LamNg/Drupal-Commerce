@@ -1,3 +1,4 @@
+# @TODO: These new lines are not good on non-Windows machines (^M). Changed your editor to use CRLF, which is the Drupal standard.
 langcode: en
 status: true
 dependencies: {  }
@@ -8,5 +9,7 @@ source_type: CSV Files
 module: shopify_customers
 shared_configuration:
   source:
+  # @TODO: This works, but hard codes the location. Better approach is 
+  # https://github.com/MTechLLC/d8_custom_migrate/blob/master/web/modules/custom/custom_migrate/custom_migrate.module#L29
     path: ./modules/custom/shopify_customers/data/customers_export.csv
     header_row_count: 1

@@ -10,7 +10,10 @@ use Drupal\simpletest\WebTestBase;
  *
  * @group shopify_orders
  */
-class LoadTest extends WebTestBase{
+// @TODO: WTB is deprecated. Use BTB.
+// @See: https://www.drupal.org/node/2847678
+// And nit, but there should be a space here.
+class LoadTest extends WebTestBase {
 
   /**
    * Modules to enable.
