@@ -1,5 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: variantfulfillmentservice
-label: Variant Fulfillment Service
