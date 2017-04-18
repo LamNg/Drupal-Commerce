@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_vendor
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'The Vendor'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Vendor
+process:
+  name: Vendor
+  attribute:
+    plugin: default_value
+    default_value: vendor
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }
