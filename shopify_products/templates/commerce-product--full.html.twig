@@ -19,11 +19,12 @@
  * @ingroup themeable
  */
 #}
+
 <article{{ attributes }}>
-  <div style="width: 60%; float: left;">
+  <div>
     {{- product|without('variation_attributes', 'variations', 'variation_title', 'variation_sku', 'variation_price') -}}
   </div>
-  <div style="width: 40%; float: right;">
+  <div>
     {{ product.variation_title }}
     {{ product.variation_sku }}
     {{ product.variation_price }}

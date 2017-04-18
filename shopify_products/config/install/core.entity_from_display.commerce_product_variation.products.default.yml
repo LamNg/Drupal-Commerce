@@ -17,6 +17,8 @@ dependencies:
     - field.field.commerce_product_variation.products.attribute_inventorytracker
     - field.field.commerce_product_variation.products.attribute_inventorypolicy
     - field.field.commerce_product_variation.products.attribute_requiresshipping
+    - field.field.commerce_product_variation.products.attribute_vendor
+    - field.field.commerce_product_variation.products.attribute_fulfillmentservice
   module:
     - commerce_price
 _core:
@@ -26,6 +28,11 @@ targetEntityType: commerce_product_variation
 bundle: products
 mode: default
 content:
+  attribute_vendor:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
   attribute_option1value:
     type: options_select
     weight: 1
@@ -87,6 +94,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   attribute_requiresshipping:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  attribute_fulfillmentservice:
     type: options_select
     weight: 1
     settings: {  }

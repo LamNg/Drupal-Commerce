@@ -62,7 +62,7 @@ class DemoCsv extends CSVFileObject {
       $row_data = $this->current();
       $this->next();
 
-      $names[] = $row_data['Name'];
+      $names[] = $row_data['Handle'];
     }
     $items = array_unique($names);
     $items = array_filter($items);

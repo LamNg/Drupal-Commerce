@@ -62,7 +62,7 @@ class Product extends CSV {
       return FALSE;
     }
 
-    $sku_prefix = substr($row->getSourceProperty('SKU'), 0, 9);
+    $sku_prefix = substr($row->getSourceProperty('Variant SKU'), 0, 50);
 
     $query = \Drupal::entityQuery('commerce_product_variation')
       ->condition('sku', $sku_prefix, 'STARTS_WITH');
