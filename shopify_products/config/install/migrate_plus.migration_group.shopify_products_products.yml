@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products
+label: 'Shopify Products'
+description: 'Imports Shopify products into the site.'
+source_type: 'CSV Files'
+module: shopify_products
+shared_configuration:
+  source:
+    path: ./modules/custom/shopify_products/data/products_export.csv
+    header_row_count: 1

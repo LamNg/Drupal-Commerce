@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.products
+    - field.field.commerce_product_variation.products.attribute_option1value
+    - field.field.commerce_product_variation.products.attribute_option2value
+    - field.field.commerce_product_variation.products.attribute_option3value
+    - field.field.commerce_product_variation.products.attribute_variantgrams
+    - field.field.commerce_product_variation.products.attribute_variantbarcode
+    - field.field.commerce_product_variation.products.attribute_variantimage
+    - field.field.commerce_product_variation.products.attribute_variantinventoryqty
+    - field.field.commerce_product_variation.products.attribute_variantweightunit
+    - field.field.commerce_product_variation.products.attribute_imagesrc
+    - field.field.commerce_product_variation.products.attribute_variantprice
+    - field.field.commerce_product_variation.products.attribute_inventorytracker
+    - field.field.commerce_product_variation.products.attribute_inventorypolicy
+    - field.field.commerce_product_variation.products.attribute_requiresshipping
+    - field.field.commerce_product_variation.products.attribute_vendor
+    - field.field.commerce_product_variation.products.attribute_fulfillmentservice
+  module:
+    - commerce_price
+id: commerce_product_variation.products.default
+targetEntityType: commerce_product_variation
+bundle: products
+mode: default
+content:
+  price:
+    label: inline
+    type: commerce_price_calculated
+    weight: 0
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
+  sku:
+    label: hidden
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  attribute_color: true
+  attribute_size: true
+  product_id: true

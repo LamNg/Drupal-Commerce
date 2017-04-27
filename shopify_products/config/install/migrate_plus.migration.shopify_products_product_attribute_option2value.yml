@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_option2value
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Product size attribute values.'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Option2 Value
+process:
+  name: Option2 Value
+  attribute:
+    plugin: default_value
+    default_value: option2value
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }

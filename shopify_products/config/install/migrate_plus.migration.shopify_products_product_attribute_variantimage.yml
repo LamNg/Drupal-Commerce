@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_variantimage
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Variant Image'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Variant Image
+process:
+  name: Variant Image
+  attribute:
+    plugin: default_value
+    default_value: variantimage
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: products
+label: Products
+description: ''
+variationType: products

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_variantweightunit
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Variant Weight Unit'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Variant Weight Unit
+process:
+  name: Variant Weight Unit
+  attribute:
+    plugin: default_value
+    default_value: variantweightunit
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }

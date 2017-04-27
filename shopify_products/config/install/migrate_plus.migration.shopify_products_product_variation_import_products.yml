@@ -1,0 +1,118 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_variation_import_products
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Products Variation Import'
+source:
+  plugin: csv
+  keys:
+    - Variant SKU
+process:
+  title:
+    plugin: default_value
+    default_value: null
+  sku: Variant SKU
+  type:
+    plugin: default_value
+    default_value: products
+  price/number: Price
+  price/currency_code:
+    plugin: default_value
+    default_value: USD
+  attribute_option1value/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_option1value
+      source: Option1 Value
+  attribute_option2value/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_option2value
+      source: Option2 Value
+  attribute_option3value/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_option3value
+      source: Option3 Value
+  attribute_variantgrams/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantgrams
+      source: Variant Grams
+  attribute_variantbarcode/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantbarcode
+      source: Variant Barcode
+  attribute_variantimage/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantimage
+      source: Variant Image
+  attribute_variantinventoryqty/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantinventoryqty
+      source: Variant Inventory Qty
+  attribute_variantweightunit/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantweightunit
+      source: Variant Weight Unit
+  attribute_imagesrc/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_imagesrc
+      source: Image Src
+  attribute_variantprice/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_variantprice
+      source: Variant Price
+  attribute_inventorytracker/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_inventorytracker
+      source: Variant Inventory Tracker
+  attribute_inventorypolicy/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_inventorypolicy
+      source: Variant Inventory Policy
+  attribute_requiresshipping/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_requiresshipping
+      source: Variant Requires Shipping
+  attribute_vendor/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_vendor
+      source: Vendor
+  attribute_fulfillmentservice/target_id:
+    -
+      plugin: migration
+      migration: shopify_products_product_attribute_fulfillmentservice
+      source: Variant Fulfillment Service
+destination:
+  plugin: 'entity:commerce_product_variation'
+migration_dependencies:
+  required:
+    - shopify_products_product_attribute_option1value
+    - shopify_products_product_attribute_option2value
+    - shopify_products_product_attribute_option3value
+    - shopify_products_product_attribute_variantgrams
+    - shopify_products_product_attribute_variantbarcode
+    - shopify_products_product_attribute_variantimage
+    - shopify_products_product_attribute_variantinventoryqty
+    - shopify_products_product_attribute_variantweightunit
+    - shopify_products_product_attribute_imagesrc
+    - shopify_products_product_attribute_variantprice
+    - shopify_products_product_attribute_inventorytracker
+    - shopify_products_product_attribute_inventorypolicy
+    - shopify_products_product_attribute_requiresshipping
+    - shopify_products_product_attribute_vendor
+    - shopify_products_product_attribute_fulfillmentservice

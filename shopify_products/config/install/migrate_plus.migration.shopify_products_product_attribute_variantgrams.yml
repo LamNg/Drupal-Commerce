@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_variantgrams
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Variant Grams'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Variant Grams
+process:
+  name: Variant Grams
+  attribute:
+    plugin: default_value
+    default_value: variantgrams
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }

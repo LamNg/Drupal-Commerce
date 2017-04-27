@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: shopify_products_product_attribute_variantinventoryqty
+migration_tags:
+  - shopify_products
+migration_group: shopify_products
+label: 'Variant Inventory Quantity'
+source:
+  plugin: shopify_products_csv_attribute_values
+  keys:
+    - Variant Inventory Qty
+process:
+  name: Variant Inventory Qty
+  attribute:
+    plugin: default_value
+    default_value: variantinventoryqty
+destination:
+  plugin: 'entity:commerce_product_attribute_value'
+migration_dependencies: {  }

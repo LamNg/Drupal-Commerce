@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.products
+    - field.field.commerce_product.products.body
+    - field.field.commerce_product.products.stores
+    - field.field.commerce_product.products.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.products.default
+targetEntityType: commerce_product
+bundle: products
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 0
+    label: hidden
+    settings:
+      show_quantity: false
+      default_quantity: '1'
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  stores: true
+  uid: true
